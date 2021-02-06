@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int odd_sum = 0;
+        int evn_sum = 0;
+        while (n>0) {
+            int a = n % 10;
+            if (a%2==0) {
+                evn_sum = evn_sum + a;
+            }
+            else {
+                odd_sum = odd_sum + a;
+            }
+            n = n /10;
+        }
+        System.out.println(evn_sum + " " + odd_sum);
+	}
+}
